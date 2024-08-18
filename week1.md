@@ -6,7 +6,7 @@ Question: List the names of the users logged in and their total count without di
 
 Answer:
 ```bash
-who | cut -d' ' -f1 | sort | uniq | tee >(wc -l)
+who | cut -d' ' -fl1 | sort | uniq | tee >(wc -l)
 ```
 
 Explanation: This command lists logged-in users and counts them. `who` shows logged-in users, `cut` extracts usernames, `sort` and `uniq` remove duplicates, and `tee` with `wc -l` displays and counts the results.
